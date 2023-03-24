@@ -1,0 +1,31 @@
+{
+  "name": "hyundaicar_foundation",
+  "version": "1.0.0",
+  "description": "CHANSIK,CHOI portpolio [hyundaicar foundation]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "gulp prepare",
+    "assets": "gulp assets",
+    "build": "gulp build",
+    "live": "gulp live",
+    "dev": "gulp dev"
+  },
+  "author": "CHANSIK,CHOI [ccsik0828@gmail.com || 010-2385-3987]",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/register": "^7.15.3",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.41.1"
+  }
+}

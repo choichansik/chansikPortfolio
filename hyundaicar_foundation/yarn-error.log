@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/chansik.choi/work/portpolio/hyundaicar_foundation/node_modules/@babel/helper-compilation-targets/node_modules/lru-cache'
+
+npm manifest: 
+  {
+    "name": "hyundaicar_foundation",
+    "version": "1.0.0",
+    "description": "CHANSIK,CHOI portpolio [hyundaicar foundation]",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "CHANSIK,CHOI [ccsik0828@gmail.com || 010-2385-3987]",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.21.3",
+      "@babel/preset-env": "^7.20.2",
+      "@babel/register": "^7.21.0",
+      "browser-sync": "^2.29.1",
+      "del": "^7.0.0",
+      "gulp": "^4.0.2",
+      "gulp-clean-css": "^4.3.0",
+      "gulp-file-include": "^2.3.0",
+      "gulp-imagemin": "^8.0.0",
+      "gulp-sass": "^5.1.0",
+      "gulp-sourcemaps": "^3.0.0",
+      "gulp-uglify-es": "^3.0.0",
+      "sass": "^1.60.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
