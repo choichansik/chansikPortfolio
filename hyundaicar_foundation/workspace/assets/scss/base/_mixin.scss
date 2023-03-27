@@ -1,0 +1,228 @@
+//---------------------------------------------------
+// mixin : 재사용 스타일
+//---------------------------------------------------
+
+//transition
+@mixin transition($value) {
+    transition: $value;
+}
+
+//clearfix
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//blind
+@mixin blind {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+}
+
+//flex
+@mixin flex-flow ($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//position
+@mixin position ($position, $left: null, $top: null, $right: null, $bottom: null, $z: null) {
+    position: $position;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    z-index: $z;
+}
+
+@mixin absolute ($left, $top) {
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+//transform
+@mixin transform {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//border
+@mixin border ($width: 1px, $color) {
+    border: $width solid $color;
+}
+
+@mixin border-radius ($radius : 100%) {
+    border-radius: $radius;
+}
+
+//shadowScale
+@mixin box-shadow ($args...) {
+    box-shadow: $args;
+}
+
+//font
+@mixin fs-type ($size, $line: $txt-lh, $letter: $txt-ls, $color) {
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $letter;
+    color: $color;
+}
+
+@mixin fs ($size, $color:null) {
+    font-size: $size;
+    color: $color;
+}
+
+//bullet
+@mixin bullet-txt {
+    position: relative;
+    padding-left: 8px;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        width: 3px;
+        height: 3px;
+        border-radius: 100%;
+        background-color: $txt-dg-color;
+        transform: translateY(-50%);
+    }
+    @content;
+}
+
+//ellipsis
+@mixin ellipsis($line: 1) {
+    display: block;
+
+    @if $line==1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    @else if $line==2 {
+        width:100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @else if $line==3 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @else if $line==4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @else if $line==5 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+
+    @content;
+}
+
+//margin
+@mixin mg($mgt, $mgr, $mgb, $mgl) {
+    margin: $mgt $mgr $mgb $mgl;
+}
+
+@mixin mg1($mg) {
+    margin: $mg;
+}
+
+@mixin mg2($mgtb, $mglr) {
+    margin: $mgtb $mglr;
+}
+
+@mixin mg3($mgt, $mglr, $mgb) {
+    margin: $mgt $mglr $mgb;
+}
+
+
+//padding
+@mixin pd($pdt, $pdr, $pdb, $pdl) {
+    padding: $pdt $pdr $pdb $pdl;
+}
+
+@mixin pd1($pd) {
+    padding: $pd;
+}
+
+@mixin pd2($pdtb, $pdlr) {
+    padding: $pdtb $pdlr;
+}
+
+@mixin pd3($pdt, $pdlr, $pdb) {
+    padding: $pdt $pdlr $pdb;
+}
+
+@mixin mp($mg, $pd) {
+    margin: $mg;
+    padding: $pd;
+}
+
+//width, height
+@mixin w($w) {
+    width: $w;
+}
+
+@mixin h($h) {
+    height: $h;
+}
+
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin debug($color: red) {
+    outline: 1px dashed $color;
+}
+
+@mixin debug-bg($color: red) {
+    background-color: $color;
+}
+
+// size
+@mixin size($w: null, $h: $w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin size-half($w: null, $h: $w) {
+    width: calc($w / 2);
+    height: calc($h / 2);
+}

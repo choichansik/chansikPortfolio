@@ -1,7 +1,64 @@
-@@include('./include/head.html', {"title": "test", cssArr: ['style']})
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/css/style.css"
+    />
+    
+    <title>test</title>
+  </head>
+</html>
+
 
 <body>
-  @@include('./include/components/header.html')
+  <!-- header -->
+  <header
+    class="header"
+    data-scroll
+    data-scroll-speed="-3"
+    data-scroll-id="header"
+  >
+    <div class="header--inner">
+      <div class="header--box">
+        <h1 class="header--logo">
+          <img src="../assets/img/main/logo.svg" alt="현대차 정몽구재단" />
+        </h1>
+
+        <nav class="header--nav">
+          <ul class="header--nav__list">
+            <li class="header--nav__item">
+              <a href="#">재단소개</a>
+            </li>
+            <li class="header--nav__item">
+              <a href="#">미래혁신 플랫폼</a>
+            </li>
+            <li class="header--nav__item">
+              <a href="#">사회공헌 헤리티지</a>
+            </li>
+            <li class="header--nav__item">
+              <a href="#">재단소식</a>
+            </li>
+            <li class="header--nav__item">
+              <a href="#">자료실</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header--btn">
+          <div class="header--lang"><button></button></div>
+          <div class="header--menu"><button></button></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- / header -->
+
 
   <div class="container" data-scroll-container data-scroll-section-inview>
     <!-- main slide -->
@@ -587,4 +644,13 @@
   </div>
 </body>
 
-@@include('./include/script.html')
+<script src="/dist/assets/js/plugin/jquery-3.6.0.min.js"></script>
+<script src="/dist/assets/js/plugin/locomotive-scroll.min.js"></script>
+<script src="/dist/assets/js/plugin/gsap.min.js"></script>
+<script src="/dist/assets/js/plugin/TweenMax.js"></script>
+<script src="/dist/assets/js/plugin/ScrollTrigger.min.js"></script>
+<script src="/dist/assets/js/plugin/odometer.min.js"></script>
+<script src="/dist/assets/js/plugin/swiper-bundle.min.js"></script>
+<script src="/dist/assets/js/plugin/slick.min.js"></script>
+<script src="/dist/assets/js/ui.js"></script>
+

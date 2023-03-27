@@ -1,0 +1,133 @@
+//---------------------------------------------------
+// variable : 기본 재사용 선언 스타일
+//---------------------------------------------------
+
+$notosans: 'NotoSansKR';
+$roboto: 'Roboto';
+$path-img: '../img/';
+$path-img-guide: $path-img+'guide/';
+$path-img-header: $path-img+'header/';
+$path-img-common: $path-img+'common/';
+$path-img-footer: $path-img+'footer/';
+$path-img-contents: $path-img+'contents/';
+$path-img-ico: $path-img+'ico/';
+$path-img-main: $path-img+'main/';
+$path-img-temp: $path-img+'@temp/';
+
+$default-layout-size:1200px;
+
+//color
+$color-red: #CC0000;
+$color-blue: #0b5cc7;
+$color-fff: #fff;
+$color-000: #000;
+$color-111: #111;
+$color-666: #666;
+$color-999: #999;
+$color-f3f3f3: #f3f3f3;
+$color-f6f6f6: #f6f6f6;
+$color-f9f9f9: #f9f9f9;
+$color-e6e6e6: #e6e6e6;
+$color-eee: #eee;
+$color-ccc: #ccc;
+
+//easing
+$easing-type1 : cubic-bezier(0.77, 0.06, 0.28, 0.85);
+$easing-type2 : cubic-bezier(0.77, 0, 0.175, 1);
+
+// z-index
+$z-index: (overlay-layer : 10060,
+	overlay-dimmed : 10050,
+	layer : 10040,
+	dimmed : 10030,
+	sticky : 10010,
+	header : 10000,
+	go-top : 10000,
+	navigation : 100,
+	footer : 90,
+	triangle : 60,
+	navigation-rainbow : 50,
+	share-type : 41,
+	share : 40,
+	default : 1,
+	below : -1,
+);
+
+@mixin font-11 {
+	font-size: 11px;
+	line-height: 16px;
+}
+@mixin font-12 {
+	font-size: 12px;
+	line-height: 18px;
+}
+@mixin font-13 {
+	font-size: 13px;
+	line-height: 19px;
+}
+@mixin font-14 {
+	font-size: 14px;
+	line-height: 22px;
+}
+@mixin font-15 {
+	font-size: 15px;
+	line-height: 23px;
+}
+@mixin font-16 {
+	font-size: 16px;
+	line-height: 24px;
+}
+@mixin font-17 {
+	font-size: 17px;
+	line-height: 25px;
+}
+
+@mixin font-18 {
+	font-size: 18px;
+	line-height: 26px;
+}
+@mixin font-20 {
+	font-size: 20px;
+	line-height: 30px;
+}
+@mixin font-22 { //가이드 없음
+	font-size: 22px;
+	line-height: 32px;
+}
+@mixin font-24 {
+	font-size: 24px;
+	line-height: 34px;
+}
+@mixin font-26 {
+	font-size: 26px;
+	line-height: 40px;
+}
+@mixin font-28 {
+	font-size: 28px;
+	line-height: 43px;
+}
+@mixin font-30 {
+	font-size: 30px;
+	line-height: 43px;
+}
+@mixin font-32 {
+	//가이드에 없음 추가
+	font-size: 32px;
+	line-height: 43px;
+}
+@mixin font-34 {
+	font-size: 34px;
+	line-height: 48px;
+}
+@mixin font-40 {
+	font-size: 40px;
+	line-height: 60px;
+}
+@mixin font-50 {
+	font-size: 50px;
+	line-height: 70px;
+}
+@mixin font-70 {
+	font-size: 70px;
+	line-height: 95px;
+}

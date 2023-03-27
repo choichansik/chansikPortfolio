@@ -1,0 +1,309 @@
+//---------------------------------------------------
+// util : 유틸
+//---------------------------------------------------
+
+//font-style
+$f-sizes:
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+20,
+24,
+28,
+30,
+40,
+50;
+
+@each $f-size in $f-sizes {
+    .font-#{$f-size} {
+        font-size: ($f-size + px)
+    }
+}
+
+//font weight
+.fw-b {
+    font-weight: 700 !important;
+}
+
+.fw-m {
+    font-weight: 500 !important;
+}
+
+.fw-r {
+    font-weight: 400 !important;
+}
+
+//flex
+.flex {
+    @include flex-flow();
+}
+.flex-start {
+    @include flex-flow(flex-start);
+}
+
+//color
+.color {
+    &-red {
+        color: #dc000c !important;
+    }
+    &-blue {
+    }
+    &-fff {
+        color: #fff !important;
+    }
+    &-000 {
+        color: #000 !important;
+    }
+    &-111 {
+        color: #111 !important;
+    }
+    &-666 {
+        color: #666;
+    }
+    &-999 {
+    }
+    &-f3f3f3 {
+    }
+}
+
+//ellipsis
+.ellipsis {
+    @include ellipsis(1);
+
+    &-line02 {
+        @include ellipsis(2);
+    }
+    &-line03 {
+        @include ellipsis(3);
+    }
+    &-line04 {
+        @include ellipsis(4);
+    }
+    &-line05 {
+        @include ellipsis(5);
+    }
+}
+
+//width : px
+.w {
+    @for $i from 0 through 800 {
+        @if($i%1==0) {
+            &#{$i} {
+                width: #{$i}px !important;
+                max-width: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//width : %
+.wp {
+    @for $i from 5 through 100 {
+        @if($i%5==0) {
+            &#{$i} {
+                width: #{$i}+'%' !important;
+            }
+        }
+    }
+}
+
+//margin-top
+.mt {
+    @for $i from 0 through 500 {
+        @if($i%1==0) {
+            &#{$i} {
+                margin-top: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//margin-bottom
+.mb {
+    @for $i from 0 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                margin-bottom: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//margin-left
+.ml {
+    @for $i from 1 through 500 {
+        @if($i%1==0) {
+            &#{$i} {
+                margin-left: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//margin-right
+.mr {
+    @for $i from 1 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                margin-right: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//padding-top
+.pt {
+    @for $i from 1 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                padding-top: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//padding-bottom
+.pb {
+    @for $i from 0 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                padding-bottom: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//padding-left
+.pl {
+    @for $i from 1 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                padding-left: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//padding-right
+.pr {
+    @for $i from 1 through 500 {
+        @if($i%5==0) {
+            &#{$i} {
+                padding-right: #{$i}px !important;
+            }
+        }
+    }
+}
+
+//text-align
+.al {
+    &-l {
+        text-align: left!important;
+    }
+    &-r {
+        text-align: right;
+    }
+    &-c {
+        text-align: center;
+    }
+}
+
+//float
+.fl {
+    &-l {
+        float: left;
+    }
+    &-r {
+        float: right;
+    }
+}
+
+//flex
+.f-a-start {
+    align-items: flex-start !important;
+}
+
+
+[class*=flex-] {display:flex;}
+[class*=flex-between] {justify-content:space-between;}
+[class*=flex-center] {justify-content:center;}
+[class*=flex-end] {justify-content:flex-end;}
+[class*=flex-][class*=--center] {align-items:center;}
+[class*=flex-][class*=--end] {align-items:flex-end;}
+[class*=flex-][class*=--column] {flex-direction: column;}
+.flex-wrap {flex-wrap:wrap;}
+
+/** ie11 재정의 **/
+.flex-between--column {flex-direction:column;}
+.flex--center {align-items:center;}
+.flex-end--center {align-items:center;}
+.flex-between--center {align-items:center;}
+.flex-center--center {align-items:center;}
+.flex-between--end {align-items:flex-end;}
+.flex-center--end {align-items:flex-end;}
+
+//border
+.border {
+    &-none {
+        border: 0 !important;
+    }
+}
+[class^='border-'] {
+    &[class*='left'][class*='c-e6'] {
+    }
+}
+//hr
+.hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 0;
+}
+
+//col width
+[data-col="2"] > * {
+    width: calc(100% / 2);
+}
+[data-col="3"] > * {
+    width: calc(100% / 3);
+}
+[data-col="4"] > * {
+    width: calc(100% / 4);
+}
+[data-col="5"] > * {
+    width: calc(100% / 5);
+}
+
+
+//container inner
+.inner {
+    @for $i from 0 through 1200 {
+        @if($i%5==0) {
+            &#{$i} {
+                width: #{$i}px !important;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+//input width
+.inputSize {
+    @for $i from 0 through 800 {
+        @if($i%1==0) {
+            &#{$i} {
+                width: #{$i}px !important;
+                max-width: #{$i}px !important;
+                & input{
+                    width: #{$i}px !important;
+                    max-width: #{$i}px !important;
+                }
+            }
+        }
+    }
+}
+

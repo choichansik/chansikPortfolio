@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+//base
+@import "./base/variable"; // 기본 재사용 선언
+@import "./base/function"; // 기본 재사용 선언
+@import "./base/mixin"; // 재사용
+@import "./base/fonts"; // 폰트
+@import "./base/reset"; // 초기화
+@import "./base/common"; // 공통
+@import "./base/util"; // 유틸
+
+// plugin
+@import "./plugin/locomotivescroll.scss";
+@import "./plugin/swiper-bundle.min.scss";
+@import "./plugin/slick.scss";
+@import "./plugin/odometer-theme-default.scss";
+
+// layout
+@import "./layout/layout";
